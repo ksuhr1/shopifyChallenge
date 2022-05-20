@@ -1,0 +1,155 @@
+.App {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+  width: 75%;
+  margin: auto;
+}
+
+.home {
+  width: 100% !important;
+  background-image: url("https://cdn.openai.com/dall-e-2/draft-20220401a/dall-e-2-river.jpg"); /* taken from OPENAI */
+  transition: opacity .2s cubic-bezier(0.645, 0.045, 0.355, 1);
+  overflow: hidden !important;
+  opacity: 1;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 10s linear;
+    width: 50px;
+    height: 50px;
+    margin: auto 0;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.title {
+  padding: 10px;
+  color: white;
+  letter-spacing: 3px;
+}
+
+.prompt-title {
+  float: left;
+  color: white;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.userInput {
+  width: 100;
+}
+
+@media screen and (max-width: 600px) {
+  .col-25, .col-75, input[type=submit] {
+    width: 100% !important;
+    margin-top: 0;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+  height: 200px;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+  float: left;
+  font-weight: 600;
+  color: black;
+}
+
+input[type=submit] {
+  border: 1px solid;
+  background-color: #7474ff;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+
+input[type=submit]:hover {
+  background-color: #9898ee;
+}
+
+.container {
+  border-radius: 5px;
+  /* background-color: #f2f2f2; */
+  padding: 20px;
+}
+
+.response {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  border: 1px solid #cecdcd;
+}
+
+p{
+  float:left;
+  text-align: left;
+  color: black;
+}
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+header {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
