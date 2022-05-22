@@ -4,10 +4,15 @@ import './App.css';
 class App extends Component {
   constructor(props) {
     super(props);
-    this.state = {
+    this.state = JSON.parse(window.localStorage.getItem('state')) || {
       prompt:"",
       responses: [],
     };
+  }
+
+  setState(state) {
+    window.localStorage.setItem('state', JSON.stringify(state));
+    super.setState(state);
   }
 
   makeAPIRequest = (prompt) => {
@@ -19,7 +24,7 @@ class App extends Component {
       frequency_penalty: 0.0,
       presence_penalty: 0.0,
      };
-     
+
     fetch("https://api.openai.com/v1/engines/text-curie-001/completions", {
       method: "POST",
       headers: {
