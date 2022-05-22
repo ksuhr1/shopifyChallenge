@@ -10,11 +10,6 @@ class App extends Component {
     };
   }
 
-  setState(state) {
-    window.localStorage.setItem('state', JSON.stringify(state));
-    super.setState(state);
-  }
-
   makeAPIRequest = (prompt) => {
     const data = {
       prompt: prompt,
@@ -24,7 +19,7 @@ class App extends Component {
       frequency_penalty: 0.0,
       presence_penalty: 0.0,
      };
-
+    console.log("apikey:",  `${process.env.REACT_APP_OPENAI_SECRET}`);
     fetch("https://api.openai.com/v1/engines/text-curie-001/completions", {
       method: "POST",
       headers: {
