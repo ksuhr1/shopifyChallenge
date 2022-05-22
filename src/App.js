@@ -4,15 +4,10 @@ import './App.css';
 class App extends Component {
   constructor(props) {
     super(props);
-    this.state = JSON.parse(window.localStorage.getItem('state')) || {
+    this.state =  {
       prompt:"",
       responses: [],
     };
-  }
-
-  setState(state) {
-    window.localStorage.setItem('state', JSON.stringify(state));
-    super.setState(state);
   }
 
   makeAPIRequest = (prompt) => {
