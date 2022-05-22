@@ -12,6 +12,7 @@
   background-image: url("https://cdn.openai.com/dall-e-2/draft-20220401a/dall-e-2-river.jpg"); /* taken from OPENAI */
   transition: opacity .2s cubic-bezier(0.645, 0.045, 0.355, 1);
   overflow: hidden !important;
+  min-height: 100vh;
   opacity: 1;
   background-repeat: no-repeat;
   background-size: cover;
