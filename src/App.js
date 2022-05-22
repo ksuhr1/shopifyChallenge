@@ -4,7 +4,7 @@ import './App.css';
 class App extends Component {
   constructor(props) {
     super(props);
-    this.state = JSON.parse(window.localStorage.getItem('state')) || {
+    this.state = {
       prompt:"",
       responses: [],
     };
